@@ -670,7 +670,6 @@ class ManageView(discord.ui.View):
             await interaction.response.send_modal(AddJihankiModal())
 
 @bot.tree.command(name="jihanki_manage", description="自販機を管理する")
-@app_commands.guilds(discord.Object(id=GUILD_ID))
 async def jihanki_manage(interaction: discord.Interaction):
     await interaction.response.send_message("🛠 自販機管理パネル", view=ManageView(), ephemeral=True)
 
